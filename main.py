@@ -57,12 +57,12 @@ rules = {
                             "a wheel of parmagiano romano", " a pillbug",
                             "Louis XVI's head in the french revolution", "a coconut",
                             "thomas the tank engine#wheel_modifier#", "a roll of toilet paper", 
-                            "a hay bale", "that one cart wheel that refuses to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts#wheel_modifier#",
+                            "a hay bale", "that one cart wheel that refuses to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts into the floor tiles#wheel_modifier#",
                             "an armadillo", "a pencil dropped during a math exam", 
                             "Wario's motorbike#wheel_modifier#", "a boulder", "a can of beans",
                             "a very round loaf of bread", "a restless baby", "a tumbleweed"],
     "wheel_modifier": ["", " with wheels made of #roll_thing_plural#", " with wheels made of #roll_thing_plural#"],          
-    "roll_thing_plural": ["heads in the french revolution", "tumbleweeds",
+    "roll_thing_plural": ["heads during the french revolution", "tumbleweeds",
                           "cinnamon rolls", "fruit roll-ups", "rolling pins", 
                             "bean burritos", 
                             "pizza rolls", "sushi rolls", "spring rolls", "tootsie rolls", 
@@ -71,7 +71,7 @@ rules = {
                             "wheels of parmagiano romano",  
                             "heads in the french revolution", "coconuts",
                             "rolls of toilet paper", "restless babies", "pillbugs",
-                            "hay bales", "those cart wheels that refuse to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts",
+                            "hay bales", "those cart wheels that refuse to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts into the floor tiles",
                             "armadillos", "pencils dropped during a math exam", 
                             "Wario's motorbikes#wheel_modifier#", "boulders", "cans of beans",
                             "very round loaves of bread"],
@@ -125,7 +125,7 @@ async def on_message(message):
     
     # if the message is a wordle score, reply with the 'rolled' message
     if message_is_wordle(m):
-        time.sleep(3)
+        time.sleep(2)
         await message.channel.send(grammar.flatten("#rolled#"))
         return
     
