@@ -19,6 +19,7 @@ Created on Wed Jul 13 13:22:55 2022
 import discord
 import re
 import os
+import time
 
 TOKEN = os.environ['DISCORD_TOKEN']
 CHANNEL_NAME = 'general'
@@ -33,7 +34,6 @@ rules = {
     # a lip phrase is two parts: 
     # PART1: Noun + ING-Verb, or ADJ/[some_nouns]-lipped)
     # PART2: Noun + ER-verb
-    # or a 
     "lip_phrase": ["#lip_part_1# #lip_part_2#"],
     "lip_part_1": ["#lip_noun# #lip_verb_ing#", "#lipped_prefix#-lipped"],
     "lip_part_2": ["#lip_noun# #lip_verb_er#"],
@@ -86,13 +86,9 @@ rules = {
 
 grammar = tracery.Grammar(rules) # create a grammar object from the rules
 grammar.add_modifiers(base_english) # add pre-programmed modifiers
-print(grammar.flatten("#lip_phrase#")) # and flatten, starting with origin rule
+# print(grammar.flatten("#lip_phrase#")) # and flatten, starting with origin rule
 
 
-
-lip_words_ed = []
-lip_words_er = []
-lip_words_other = []
 
 @client.event
 async def on_ready():
@@ -129,6 +125,7 @@ async def on_message(message):
     
     # if the message is a wordle score, reply with the 'rolled' message
     if message_is_wordle(m):
+        time.sleep(4)
         await message.channel.send(grammar.flatten("#rolled#"))
         return
     
