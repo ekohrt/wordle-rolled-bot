@@ -64,7 +64,7 @@ rules = {
     "wheel_modifier": ["", " with wheels made of #roll_thing_plural#", " with wheels made of #roll_thing_plural#"],          
     "roll_thing_plural": ["heads in the french revolution", "tumbleweeds",
                           "cinnamon rolls", "fruit roll-ups", "rolling pins", 
-                            "tyrannosrollus rexes", "bean burritos", 
+                            "bean burritos", 
                             "pizza rolls", "sushi rolls", "spring rolls", "tootsie rolls", 
                             "pinewood derby cars#wheel_modifier#", "ankles", "D20s", "Hammonds from Overwatch", 
                             "bacci balls", "dung beetles pushing #roll_thing_plural#",
@@ -125,7 +125,7 @@ async def on_message(message):
     
     # if the message is a wordle score, reply with the 'rolled' message
     if message_is_wordle(m):
-        time.sleep(4)
+        time.sleep(3)
         await message.channel.send(grammar.flatten("#rolled#"))
         return
     
