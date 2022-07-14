@@ -1,4 +1,3 @@
-git+https://github.com/ekohrt/wordle-rolled-bot@rewrite
 nest_asyncio
 discord
 tracery
