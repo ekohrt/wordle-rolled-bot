@@ -48,9 +48,9 @@ rules = {
     "lipped_prefix": ["#lip_adj#", "#lip_noun#"],
     
     "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing_singular##modifier#."],
-    "modifier": ["", " on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#"],
+    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", "#attached_to# #roll_thing_singular#"],
     "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", 
-                            "a tyrannosrollus rex", "a bean burrito", "a Ferrari#wheel_modifier#"
+                            "a tyrannosrollus rex", "a bean burrito", "a Ferrari#wheel_modifier#",
                             "a pizza roll", "a sushi roll", "a spring roll", "a tootsie roll", 
                             "a pinewood derby car#wheel_modifier#", "an ankle", "a D20", "Hammond from Overwatch", 
                             "a bacci ball", "a dung beetle pushing #roll_thing_singular#",
@@ -61,7 +61,7 @@ rules = {
                             "an armadillo", "a pencil dropped during a math exam", 
                             "Wario's motorbike#wheel_modifier#", "a boulder", "a can of beans",
                             "a very round loaf of bread", "a restless baby", "a tumbleweed"],
-    "wheel_modifier": ["", " with wheels made of #roll_thing_plural#"],          
+    "wheel_modifier": ["", " with wheels made of #roll_thing_plural#", " with wheels made of #roll_thing_plural#"],          
     "roll_thing_plural": ["heads in the french revolution", "tumbleweeds",
                           "cinnamon rolls", "fruit roll-ups", "rolling pins", 
                             "tyrannosrollus rexes", "bean burritos", 
@@ -75,10 +75,13 @@ rules = {
                             "armadillos", "pencils dropped during a math exam", 
                             "Wario's motorbikes#wheel_modifier#", "boulders", "cans of beans",
                             "very round loaves of bread"],
-    "thing_on": ["a hill", "a treadmill", "a skateboard", "rollerskates", "ecstasy", "a windmill", "a rollercoaster", "a yo-yo", "a slip 'n' slide"],
+    "thing_on": ["a hill", "a treadmill", "a skateboard", "rollerskates", "ecstasy", "a windmill", 
+                 "a rollercoaster", "a yo-yo", "a slip 'n' slide", "#roll_thing_singular#"],
     "thing_in": ["a rock tumbler", "a washing machine", "an industrial centrifuge", "a hurricane", 
                  "a wind tunnel", "a cocktail shaker", "a gymnastics class", "a parkour video", 
-                 "a salad spinner", "the back of an Amazon delivery van"]
+                 "a salad spinner", "the back of an Amazon delivery van"],
+    "attached_to": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
+                    "magically fused with"]
 }
 
 grammar = tracery.Grammar(rules) # create a grammar object from the rules
