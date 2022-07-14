@@ -1,6 +1,4 @@
+aiohttp
 nest_asyncio
 discord
 tracery
-random
-re
-time

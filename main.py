@@ -10,16 +10,19 @@ Created on Wed Jul 13 13:22:55 2022
 # bot invite url (paste into browser): 
 # https://discord.com/api/oauth2/authorize?client_id=996826543286386858&permissions=532576467008&scope=bot
 
-import nest_asyncio
-nest_asyncio.apply()
+#import aiohttp
+#import nest_asyncio
+#nest_asyncio.apply()
 # __import__('IPython').embed()
+
 
 import discord
 import random
 import re
 import time
+import os
 
-TOKEN = 'OTk2ODI2NTQzMjg2Mzg2ODU4.GAgrmK.FEiy7vYiQv-DMRm0dsLtR6GMHpxVu-KNLqClUg'
+TOKEN = os.environ['DISCORD_TOKEN']
 CHANNEL_NAME = 'general'
 
 client = discord.Client()
