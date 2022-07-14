@@ -11,8 +11,8 @@ Created on Wed Jul 13 13:22:55 2022
 # https://discord.com/api/oauth2/authorize?client_id=996826543286386858&permissions=532576467008&scope=bot
 
 #import aiohttp
-#import nest_asyncio
-#nest_asyncio.apply()
+# import nest_asyncio
+# nest_asyncio.apply()
 # __import__('IPython').embed()
 
 
@@ -84,4 +84,6 @@ async def on_message(message):
 def message_is_wordle(m):
     return ('wordle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
     
-client.run(TOKEN)
+
+if __name__ == '__main__':
+    client.run(TOKEN)
