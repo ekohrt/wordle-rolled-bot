@@ -48,16 +48,16 @@ rules = {
     "lipped_prefix": ["#lip_adj#", "#lip_noun#"],
     
     "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing_singular##modifier#."],
-    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", "#attached_to# #roll_thing_singular#"],
+    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", " #attached_to# #roll_thing_singular#"],
     "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", 
                             "a tyrannosrollus rex", "a bean burrito", "a Ferrari#wheel_modifier#",
                             "a pizza roll", "a sushi roll", "a spring roll", "a tootsie roll", 
                             "a pinewood derby car#wheel_modifier#", "an ankle", "a D20", "Hammond from Overwatch", 
                             "a bacci ball", "a dung beetle pushing #roll_thing_singular#",
-                            "a wheel of parmagiano romano", "a fancy cigar", 
+                            "a wheel of parmagiano romano", " a pillbug",
                             "Louis XVI's head in the french revolution", "a coconut",
                             "thomas the tank engine#wheel_modifier#", "a roll of toilet paper", 
-                            "a pig in the mud", "a hay bale", "that one cart wheel that refuses to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts#wheel_modifier#",
+                            "a hay bale", "that one cart wheel that refuses to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts#wheel_modifier#",
                             "an armadillo", "a pencil dropped during a math exam", 
                             "Wario's motorbike#wheel_modifier#", "a boulder", "a can of beans",
                             "a very round loaf of bread", "a restless baby", "a tumbleweed"],
@@ -68,10 +68,10 @@ rules = {
                             "pizza rolls", "sushi rolls", "spring rolls", "tootsie rolls", 
                             "pinewood derby cars#wheel_modifier#", "ankles", "D20s", "Hammonds from Overwatch", 
                             "bacci balls", "dung beetles pushing #roll_thing_plural#",
-                            "wheels of parmagiano romano", "fancy cigars", 
+                            "wheels of parmagiano romano",  
                             "heads in the french revolution", "coconuts",
-                            "rolls of toilet paper", "restless babies",
-                            "pigs in the mud", "hay bales", "those cart wheels that refuse to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts",
+                            "rolls of toilet paper", "restless babies", "pillbugs",
+                            "hay bales", "those cart wheels that refuse to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts",
                             "armadillos", "pencils dropped during a math exam", 
                             "Wario's motorbikes#wheel_modifier#", "boulders", "cans of beans",
                             "very round loaves of bread"],
@@ -111,7 +111,7 @@ async def on_message(message):
         return
     
     # only respond in designated channel
-    if m == 'general':
+    if m.channel.name == 'general':
         if m == '!hello':
             await message.channel.send(f'Hello {username}!')
             return
