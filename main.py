@@ -47,7 +47,7 @@ rules = {
                     "lover", "liquefier"],
     "lipped_prefix": ["#lip_adj#", "#lip_noun#"],
     
-    "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing-singular##modifier#."],
+    "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing_singular##modifier#."],
     "modifier": ["", " on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#"],
     "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", 
                             "a tyrannosrollus rex", "a bean burrito", "a Ferrari#wheel_modifier#"
@@ -60,9 +60,9 @@ rules = {
                             "a pig in the mud", "a hay bale", "that one cart wheel that refuses to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts#wheel_modifier#",
                             "an armadillo", "a pencil dropped during a math exam", 
                             "Wario's motorbike#wheel_modifier#", "a boulder", "a can of beans",
-                            "a very round loaf of bread", "a restless baby"],
+                            "a very round loaf of bread", "a restless baby", "a tumbleweed"],
     "wheel_modifier": ["", " with wheels made of #roll_thing_plural#"],          
-    "roll_thing_plural": ["heads in the french revolution", "thunder clouds",
+    "roll_thing_plural": ["heads in the french revolution", "tumbleweeds",
                           "cinnamon rolls", "fruit roll-ups", "rolling pins", 
                             "tyrannosrollus rexes", "bean burritos", 
                             "pizza rolls", "sushi rolls", "spring rolls", "tootsie rolls", 
