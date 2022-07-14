@@ -111,7 +111,7 @@ async def on_message(message):
         return
     
     # only respond in designated channel
-    if m.channel.name == 'general':
+    if message.channel.name == 'general':
         if m == '!hello':
             await message.channel.send(f'Hello {username}!')
             return
