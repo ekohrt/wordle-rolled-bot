@@ -1,4 +1,3 @@
 aiohttp
-nest_asyncio
 discord
 tracery
