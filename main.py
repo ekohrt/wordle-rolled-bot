@@ -122,7 +122,13 @@ async def on_message(message):
         await message.channel.send(grammar.flatten("#lip_phrase#"))
         return
     
-    if 'rolled' in m:
+    # command version of the 'rolled' message
+    if '!rolled' in m:
+        await message.channel.send(grammar.flatten("#rolled#"))
+        return
+    
+    # if the message is a wordle score, reply with the 'rolled' message
+    if message_is_wordle(m):
         await message.channel.send(grammar.flatten("#rolled#"))
         return
     
@@ -130,7 +136,7 @@ async def on_message(message):
         
 def message_is_wordle(m):
     # returns true if message is a pasted wordle score
-    return ('wordle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
+    return ('wordle' in m or 'lewdle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
     
 
 
