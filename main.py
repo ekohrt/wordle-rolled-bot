@@ -48,7 +48,7 @@ rules = {
     "lipped_prefix": ["#lip_adj#", "#lip_noun#"],
     
     "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing_singular##modifier#."],
-    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", " #attached_to# #roll_thing_singular#", "made of #roll_thing_plural#"],
+    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", " #attached_to# #roll_thing_singular#", " made of #roll_thing_plural#"],
     "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", 
                             "a tyrannosrollus rex", "a bean burrito", "a Ferrari#wheel_modifier#",
                             "a pizza roll", "a sushi roll", "a spring roll", "a tootsie roll", 
