@@ -48,13 +48,13 @@ rules = {
     "lipped_prefix": ["#lip_adj#", "#lip_noun#"],
     
     "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing_singular##modifier#."],
-    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", " #attached_to# #roll_thing_singular#"],
+    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", " #attached_to# #roll_thing_singular#", "made of #roll_thing_plural#"],
     "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", 
                             "a tyrannosrollus rex", "a bean burrito", "a Ferrari#wheel_modifier#",
                             "a pizza roll", "a sushi roll", "a spring roll", "a tootsie roll", 
                             "a pinewood derby car#wheel_modifier#", "an ankle", "a D20", "Hammond from Overwatch", 
                             "a bacci ball", "a dung beetle pushing #roll_thing_singular#",
-                            "a wheel of parmagiano romano", " a pillbug",
+                            "a wheel of parmagiano romano", "a pillbug",
                             "Louis XVI's head in the french revolution", "a coconut",
                             "thomas the tank engine#wheel_modifier#", "a roll of toilet paper", 
                             "a hay bale", "that one cart wheel that refuses to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts into the floor tiles#wheel_modifier#",
@@ -133,7 +133,7 @@ async def on_message(message):
         
 def message_is_wordle(m):
     # returns true if message is a pasted wordle score
-    return ('wordle' in m or 'lewdle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
+    return ('ordle' in m or 'lewdle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
     
 
 
