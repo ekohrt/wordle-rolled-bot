@@ -113,7 +113,7 @@ async def on_message(message):
             return
     
     # if you don't check channel name, bot can respond anywhere
-    if any(x in m.split() for x in ['lip', 'lipped', 'licker', '!lip']):
+    if any(x in m.split() for x in ['!lip', 'lip', 'lipped', 'lipping', 'lipper', 'licker', '!lip']):
         # lip_token = random.choice([t for t in m.split() if 'lip' in t]) # TODO: incorporate the word containing 'lip'
         await message.channel.send(grammar.flatten("#lip_phrase#"))
         return
