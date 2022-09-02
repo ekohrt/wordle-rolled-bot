@@ -2,3 +2,5 @@ discord
 tracery
 transformers
 nltk
+tensorflow
+torch
