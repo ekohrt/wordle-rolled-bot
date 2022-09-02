@@ -24,8 +24,8 @@ import time
 TOKEN = os.environ['DISCORD_TOKEN']
 CHANNEL_NAME = 'general'
 
-# client = discord.Client()
-client = discord.Client(intents=discord.Intents.default())
+client = discord.Client()
+# client = discord.Client(intents=discord.Intents.default())
 
 import tracery
 from tracery.modifiers import base_english
@@ -150,23 +150,6 @@ def message_is_wordle(m):
     # returns true if message is a pasted wordle score
     return ('dle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
