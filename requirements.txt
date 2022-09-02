@@ -1,2 +1,4 @@
 discord
 tracery
+transformers
+nltk

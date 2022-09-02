@@ -90,6 +90,60 @@ grammar.add_modifiers(base_english) # add pre-programmed modifiers
 
 
 
+# --------------------------
+# Fable Generator (GPT-2)
+# --------------------------
+
+from transformers import pipeline
+generator = pipeline('text-generation', model='gpt2') # model='gpt2' # model='pranavpsv/gpt2-genre-story-generator' # docs: https://huggingface.co/docs/transformers/main_classes/text_generation
+
+import nltk
+nltk.download('punkt')
+from nltk import sent_tokenize # tokenize into sentences: https://stackoverflow.com/a/37605851
+import random
+
+intro_prompt = f"The following is a classic fable about {topic}:\n"
+
+# Template: prompt options followed by number of sentences to generate.
+story_template = [([intro_prompt+"Once upon a time, there was"], 3),
+            (["One day,", "One night,", "One morning,"], 1),
+            (["But"], 1), # conflict
+            (["So"], 1),  # resolution
+            (["In the end,", "And legend has it that to this very day,", "The moral of the story is,"], 1)]
+
+def generate_fable(topic):
+  """generates a short fable about the given topic (string). 
+  """
+  # construct the story
+  final_story = ""
+  for prompt_options, num_sents_to_keep in story_template:
+    # randomly choose a prompt option, concat to generated story so far
+    prompt = final_story + random.choice(prompt_options) 
+    # generate text, only keep the newly generated part
+    generated_text = generator(prompt, max_new_tokens=50*num_sents_to_keep, num_return_sequences=1)[0]['generated_text'].replace(final_story, "") 
+    # only keep n sentences
+    all_sentences = sent_tokenize(generated_text)
+    if len(all_sentences) >= num_sents_to_keep:
+      sentences_to_keep = all_sentences[:num_sents_to_keep] 
+    else:
+      sentences_to_keep = all_sentences
+
+    # append sentences to final story
+    final_story += " ".join(sentences_to_keep) + " "
+
+  # cleanup and return
+  final_story = final_story.replace(intro_prompt, "")
+  final_story += "The end."
+  return final_story
+
+
+
+
+# -----------------------
+# Bot Commands
+# -----------------------
+
+
 @client.event
 async def on_ready():
     print('we have logged in as {0.user}'.format(client))
@@ -129,11 +183,28 @@ async def on_message(message):
         await message.channel.send(grammar.flatten("#rolled#"))
         return
     
+    if 'good bot' in m:
+        await message.channel.send('♥')
+        return
+
+    if 'bad bot' in m:
+        await message.channel.send('sorry')
+        return
+
+    # generate a fable with '!fable <topic>' like !fable dragons' 
+    if '!fable' in m:
+        topic = m.replace('!fable', '').strip()
+        # if no topic is given, make the story about the sender
+        if topic == '':
+            topic = 'a person named ' + username
+        fable = generate_fable(topic)
+        await message.channel.send(fable)
+        return
     
         
 def message_is_wordle(m):
     # returns true if message is a pasted wordle score
-    return ('ordle' in m or 'lewdle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
+    return ('dle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
     
 
 
