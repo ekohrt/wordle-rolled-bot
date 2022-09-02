@@ -24,7 +24,8 @@ import time
 TOKEN = os.environ['DISCORD_TOKEN']
 CHANNEL_NAME = 'general'
 
-client = discord.Client()
+# client = discord.Client()
+client = discord.Client(intents=discord.Intents.default())
 
 import tracery
 from tracery.modifiers import base_english
