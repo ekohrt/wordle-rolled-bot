@@ -1,5 +1,2 @@
 discord
 tracery
-transformers
-nltk
-tensorflow-cpu
