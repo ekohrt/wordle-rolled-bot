@@ -87,9 +87,9 @@ rules = {
     "attached_to": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
                     "magically fused with"],
 
-    "jeremy": ["Captain's log, day #number#: #feeling#. #did_today#. #do_tomorrow#."],
+    "jeremy": ["Captain's log, day #number#: #feeling#. #did_today#. #do_tomorrow#"],
     "number": ["2132545", "21345457"],
-    "feeling": ["Today I'm feeling #emotion_adj#", "It's been #day_adj# today."],
+    "feeling": ["Today I'm feeling #emotion_adj#", "It's been a #day_adj# day today"],
     "emotion_adj": ["great", "awful", "spectacular", "sexy"],
     "day_adj": ["a long", "an exciting", "a boring"],
     "did_today": ["#people_events#", "#pet_events#"],
@@ -111,8 +111,8 @@ rules = {
                     "my horror movie poster collection", "my video game collection", "my yugioh card collection",
                     "my nintendo switch", "my heart"],
     "family": ["Deanna", "Fae", "Ariel", "Quinn"],
-    "character": ["the neighbors", "the neighbors", "the neighbors", "vincent markowski", "sam", "adam", "angel",
-                    "izzy", "charlene", "lindsey", "christina barsema", "the voices in my head", "the illuminati",
+    "character": ["the neighbors", "the neighbors", "the neighbors", "Vincent Markowski", "Sam", "Adam", "Angel",
+                    "Izzy", "Charlene", "Lindsey", "Christina Barsema", "the voices in my head", "the illuminati",
                     "Tits McGee", "my lawyer"],
 
     #The neighbors <upstairs, across the street? down the hall?> <thing they did>
