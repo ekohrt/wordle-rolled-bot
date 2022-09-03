@@ -25,7 +25,7 @@ TOKEN = os.environ['DISCORD_TOKEN']
 CHANNEL_NAME = 'general'
 
 # client = discord.Client()
-intents = discord.Intents(messages=True, guilds=True)
+intents = discord.Intents(messages=True, message_content=True, guilds=True, guild_messages=True)
 client = discord.Client(intents=intents)
 
 # client = discord.Client(intents=discord.Intents().all())
