@@ -85,7 +85,53 @@ rules = {
                  "a wind tunnel", "a cocktail shaker", "a gymnastics class", "a parkour video", 
                  "a salad spinner", "the back of an Amazon delivery van"],
     "attached_to": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
-                    "magically fused with"]
+                    "magically fused with"],
+
+    "jeremy": ["Captain's log, day #number#: #feeling#. #did_today#. #do_tomorrow#."],
+    "number": ["2132545", "21345457"],
+    "feeling": ["Today I'm feeling #emotion_adj#", "It's been #day_adj# today."],
+    "emotion_adj": ["great", "awful", "spectacular", "sexy"],
+    "day_adj": ["a long", "an exciting", "a boring"],
+    "did_today": ["#people_events#", "#pet_events#"],
+
+    "people_events": ["#character# blasted music really loud", "#character# got into an argument with me about #argument_topic#", 
+                        "#character# almost punched me in the face", "#character# mooched off my wifi", 
+                        "#character# stole my #valuable_item#", "#character# smoked so much weed that #family# had to go to the hospital", 
+                        "#character# added some more knife holes to my front door"],
+
+    "pet_events": ["#family# bit me", "#family# scratched me", 
+                    "#family# woke up super early and made lots of noise", "#family# meowed obnoxiously", 
+                    "#family# pretended to be sad for attention", "#family# destroyed #valuable_item#"],
+
+
+    "argument_topic": ["their bratty kid", "their shitty taste in anime", "their music being too loud", "flat earth theory",
+                        "what is the best kind of alcohol", "high fashion", "yugioh cards", "criminal psychology", "pornstars",
+                        "the optimal size of a cereal spoon", "how well done a hamburger should be cooked"],
+    "valuable_item": ["my phone", "my engagement ring", "my smartwatch", "my gundam collection", "my action figures", 
+                    "my horror movie poster collection", "my video game collection", "my yugioh card collection",
+                    "my nintendo switch", "my heart"],
+    "family": ["Deanna", "Fae", "Ariel", "Quinn"],
+    "character": ["the neighbors", "the neighbors", "the neighbors", "vincent markowski", "sam", "adam", "angel",
+                    "izzy", "charlene", "lindsey", "christina barsema", "the voices in my head", "the illuminati",
+                    "Tits McGee", "my lawyer"],
+
+    #The neighbors <upstairs, across the street? down the hall?> <thing they did>
+    # thing they did: blasted music really loud, got into an argument about <argument_topic>, almost punched me in the face, mooched off my wifi,
+
+    # yelled at christian neighbor upstairs about the radio
+    # the neighbor with the bratty kid -> got in a fight, egged him on
+    # the neighbor (anger issues) asked for my wifi password and mooched off their wifi
+    # repaired/added knife holes in the front door
+    # the cats -> Fae bit Jeremy, scratches face, wakes up early and loudly
+    # -> Quinn: is chill
+    # the dog -> Ariel 80lb grey sausage of happiness, energetic, pretends to be sad for attention, tore up a frisbee/chewtoys
+    # neighbors play music really loudly, argue, neighbors kid + friends pretend to be tough, reckless golf in yard
+    # tried to get this neighbor to punch him in the face
+    # vincent markowski -> asshole
+
+    "do_tomorrow": ["I guess I'll deal with it tomorrow", "What good luck!", "Can't wait to see what tomorrow brings!", 
+                    "It sure is great living out in Medusa NY!", "I'll have to talk to #character# about that tomorrow."]
+    # how im feeling, what i did today, what i will do tomorrow?
 }
 
 grammar = tracery.Grammar(rules) # create a grammar object from the rules
@@ -145,6 +191,10 @@ async def on_message(message):
 
     if 'bad bot' in m:
         await message.channel.send('sorry')
+        return
+
+    if '!jeremy' in m:
+        await message.channel.send(grammar.flatten("#jeremy#"))
         return
 
     
