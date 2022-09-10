@@ -106,7 +106,7 @@ rules = {
                     "#character# woke up super early and made lots of noise", "#character# meowed at me obnoxiously", 
                     "#character# pretended to be sad for attention", "#character# destroyed #valuable_item#"],
 
-    "while_i_was": ["", "while I was mowing my lawn", "while I was eating breakfast", "while I was cleaning #valuable_item#",
+    "while_i_was": ["while I was mowing my lawn", "while I was eating breakfast", "while I was cleaning #valuable_item#",
                     "while I procrastinated cleaning the house", "while I was playing #video_game#", 
                     "while I was in a driving lesson", "while I was enjoying a #alcoholic_drink# in peace",
                     "while I wastrying to listen to #music#", "while I was practicing my #karate_move#s"],
