@@ -89,14 +89,14 @@ rules = {
                     "magically fused with"],
 
     # JEREMY BOT
-    "number": ["[NUMBER]"],
-    "feeling": ["Today I'm feeling #emotion_adj#", "It's been a #day_adj# day today"],
-    "emotion_adj": ["great", "awful", "spectacular", "sexy"],
+    "number": ["NUMBER"],
+    "feeling": ["Today I'm feeling #emotion_adj#", "It's been #day_adj# day today"],
+    "emotion_adj": ["great", "awful", "fantastic", "sexy", "absolutely shook", "better than ever before", "betrayed"],
     "day_adj": ["a long", "an exciting", "a boring"],
     
     "did_today": ["#[character:#all_characters#]people_events#", "#[character:#all_characters#]people_events#", "#[character:#family#]pet_events#"],
 
-    "people_events": ["#character# blasted music really loud", "#character# got into an argument with me about #argument_topic#", 
+    "people_events": ["#character# blasted #music# really loud", "#character# got into an argument with me about #argument_topic#", 
                         "#character# almost punched me in the #body_part#", "#character# mooched off my wifi all day", 
                         "#character# stole #valuable_item#", "#character# smoked so much weed that #family# had to go to the hospital", 
                         "#character# added some more knife holes to my front door", "#character# tried to give me unsolicited driving advice",
@@ -107,7 +107,9 @@ rules = {
                     "#character# pretended to be sad for attention", "#character# destroyed #valuable_item#"],
 
     "while_i_was": ["", "while I was mowing my lawn", "while I was eating breakfast", "while I was cleaning #valuable_item#",
-                    "while I procrastinated cleaning the house", "while I was playing #video_game#", "while I was in a driving lesson"],
+                    "while I procrastinated cleaning the house", "while I was playing #video_game#", 
+                    "while I was in a driving lesson", "while I was enjoying a #alcoholic_drink# in peace",
+                    "while I wastrying to listen to #music#", "while I was practicing my #karate_move#s"],
 
     "argument_topic": ["their bratty kid", "their shitty taste in anime", "their music being too loud", "flat earth theory",
                         "what is the best kind of alcohol", "high fashion", "yugioh cards", "criminal psychology", "pornstars",
@@ -148,7 +150,10 @@ rules = {
     "video_game": ["Dead By Daylight", "Minecract", "Overwatch", "Superhot", "Wii Bowling", "Tetris",
                    "Party Hard", "Dance Dance Revolution"],
     
-    "alcoholic_drink": ["Fireball", "Samuel Adams", "Jack Daniels", "Long Island Iced Tea", "Shirley Temple", "Breakfast martini", "Margarita"]
+    "alcoholic_drink": ["Fireball", "Samuel Adams", "Jack Daniels", "Long Island Iced Tea", 
+                        "Shirley Temple", "Breakfast martini", "Margarita"],
+    
+    "music": ["christian radio", "cottoneye joe", "polka music", "showtunes", "baby shark", "the pokemon themesong"]
     }
 
     #The neighbors <upstairs, across the street? down the hall?> <thing they did>
@@ -227,7 +232,8 @@ async def on_message(message):
         return
 
     if '!jeremy' in m:
-        story = grammar.flatten("#jeremy#").replace( "[NUMBER]", str(random.randint(100, 1000)) )
+        story = grammar.flatten("#jeremy#")
+        story = story.replace( "NUMBER", str(random.randint(100, 1400)) )
         await message.channel.send(story)
         return
 
