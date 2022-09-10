@@ -113,7 +113,7 @@ rules = {
     "while_i_was": ["while I was mowing my lawn", "while I was eating breakfast", "while I was cleaning #valuable_item#",
                     "while I procrastinated cleaning the house", "while I was playing #video_game#", 
                     "while I was in a driving lesson", "while I was enjoying a #alcoholic_drink# in peace",
-                    "while I wastrying to listen to #music#", "while I was practicing my #karate_move#s"],
+                    "while I was trying to listen to #music#", "while I was practicing my #karate_move#s"],
 
     "argument_topic": ["their bratty kid", "their shitty taste in anime", "their music being too loud", "flat earth theory",
                         "what is the best kind of alcohol", "high fashion", "yugioh cards", "criminal psychology", "pornstars",
