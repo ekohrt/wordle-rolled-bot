@@ -36,9 +36,7 @@ import random
 
 # put your grammar here as the value assigned to "rules"
 rules = {
-    # a lip phrase is two parts: 
-    # PART1: Noun + ING-Verb, or ADJ/[some_nouns]-lipped)
-    # PART2: Noun + ER-verb
+    # LIP LICKING LIP LICKER
     "lip_phrase": ["#lip_part_1# #lip_part_2#"],
     "lip_part_1": ["#lip_noun# #lip_verb_ing#", "#lipped_prefix#-lipped"],
     "lip_part_2": ["#lip_noun# #lip_verb_er#"],
@@ -52,6 +50,8 @@ rules = {
                     "lover", "liquefier"],
     "lipped_prefix": ["#lip_adj#", "#lip_noun#"],
     
+
+    # ROLLED PHRASE
     "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing_singular##modifier#."],
     "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", " #attached_to# #roll_thing_singular#", " made of #roll_thing_plural#"],
     "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", 
@@ -88,13 +88,16 @@ rules = {
     "attached_to": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
                     "magically fused with"],
 
+
     # JEREMY BOT
-    "number": ["NUMBER"],
+    "number": ["NUMBER"], # manually replace "NUMBER" with a random number afterward
     "feeling": ["Today I'm feeling #emotion_adj#", "It's been #day_adj# day today"],
     "emotion_adj": ["great", "awful", "fantastic", "sexy", "absolutely shook", "better than ever before", "betrayed"],
     "day_adj": ["a long", "an exciting", "a boring"],
     
-    "did_today": ["#[character:#all_characters#]people_events.capitalize#", "#[character:#all_characters#]people_events.capitalize#", "#[character:#family#]pet_events.capitalize#"],
+    "did_today": ["#[character:#all_characters#]people_events.capitalize#", 
+                "#[character:#all_characters#]people_events.capitalize#", 
+                "#[character:#family#]pet_events.capitalize#"],
 
     "people_events": ["#character# blasted #music# really loud", 
                         "#character# got into an argument with me about #argument_topic#", 
@@ -104,16 +107,54 @@ rules = {
                         "#character# smoked so much weed that #family# had to go to the hospital", 
                         "#character# added some more knife holes to my front door", 
                         "#character# tried to give me unsolicited driving advice",
+                        "#character# smashed a golf ball through my window"
                         ],
 
     "pet_events": ["#character# bit me in the #body_part#", "#character# scratched me on the #body_part#", 
                     "#character# woke up super early and made lots of noise", "#character# meowed at me obnoxiously", 
-                    "#character# pretended to be sad for attention", "#character# destroyed #valuable_item#"],
+                    "#character# pretended to be sad for attention", "#character# destroyed #valuable_item#",
+                    "#character# made the most adorable puppy eyes at me", 
+                    "#character# left part of a dead squirrel on the floor"],
 
-    "while_i_was": ["while I was mowing my lawn", "while I was eating breakfast", "while I was cleaning #valuable_item#",
-                    "while I procrastinated cleaning the house", "while I was playing #video_game#", 
-                    "while I was in a driving lesson", "while I was enjoying a #alcoholic_drink# in peace",
-                    "while I was trying to listen to #music#", "while I was practicing my #karate_move#s"],
+    "while_i_was": ["while I was #doing_thing#", "while I was trying to #do_thing#"],
+
+    "doing_thing": ["mowing my lawn", "eating breakfast", 
+                    "polishing #valuable_item#", "procrastinating cleaning the house",
+                    "playing #video_game#", "taking a a driving lesson", 
+                    "enjoying a #alcoholic_drink# in peace", "listening to #music#", 
+                    "practicing my #karate_move#s", "sleeping"],
+
+    "do_thing": ["mow my lawn", "eat breakfast", 
+                    "polish #valuable_item#", "procrastinate cleaning the house", 
+                    "play #video_game#", "take a driving lesson",
+                    "enjoy a #alcoholic_drink# in peace", "listen to #music#",
+                    "practice my #karate_move#s", "sleep"],
+
+    "response": ["So I challenged #character# to a duel, their fists vs my secret #karate_move# technique", 
+                 "So I went to #character#'s house and burned it down",
+                 "It took all my effort not to punch #character# in the #body_part#", 
+                 "So I stuck #character# in the closet and ignored them", 
+                 "I called the police immediately",
+                 "So I unleashed my karate skills and landed a #karate_move# right in #character#'s #body_part#",
+                 "This naturally sparked a heated argument about #argument_topic#",
+                 "I spent all day plotting my revenge"
+                ],
+    
+    "do_tomorrow": ["What good luck!", "Can't wait to see what tomorrow brings!", 
+                    "It sure is great living out in Medusa NY!", "I'll have to talk to #character# about that tomorrow.",
+                    "God I hate them...", "Their body will never be found."],
+    
+    "story": ["Captain's log, day #number#: #feeling#. #did_today# #while_i_was#. #response#. #do_tomorrow#"],
+    
+    "jeremy": ["""#[character:#all_characters#]story#"""], # START / ORIGIN
+
+
+
+    "family": ["Deanna", "Fae", "Ariel", "Quinn"],
+    
+    "all_characters": ["the neighbors", "the neighbors", "the neighbors", "Vincent Markowski", "Sam", "Adam", "Angel",
+                    "Izzy", "Charlene", "Lindsey", "Christina Barsema", "the voices in my head", "the illuminati",
+                    "Tits McGee", "my lawyer", "#family#", "my driving instructor"],
 
     "argument_topic": ["their bratty kid", "their shitty taste in anime", "their music being too loud", "flat earth theory",
                         "what is the best kind of alcohol", "high fashion", "yugioh cards", "criminal psychology", "pornstars",
@@ -123,35 +164,13 @@ rules = {
     "valuable_item": ["my phone", "my engagement ring", "my smartwatch", "my gundam collection", "my action figures", 
                     "my horror movie poster collection", "my video game collection", "my yugioh card collection",
                     "my nintendo switch", "my heart"],
-    
-    "family": ["Deanna", "Fae", "Ariel", "Quinn"],
-    
-    "all_characters": ["the neighbors", "the neighbors", "the neighbors", "Vincent Markowski", "Sam", "Adam", "Angel",
-                    "Izzy", "Charlene", "Lindsey", "Christina Barsema", "the voices in my head", "the illuminati",
-                    "Tits McGee", "my lawyer", "#family#", "my driving instructor"],
 
-    "response": ["So I challenged #character# to a duel to the death", 
-                 "So I went to #character#'s house and burned it down",
-                 "It took all my effort not to punch #character# in the #body_part#", 
-                 "So I locked #character# in the closet and ignored them", 
-                 "I called the police immediately",
-                 "So I unleashed my karate skills and landed a #karate_move# right in #character#'s #body_part#"
-                 ],
-    
     "karate_move": ["karate chop", "front snap kick", "spinning back hook kick", "roundhouse kick", 
                     "flying spinning inside crescent kick", "haymaker", "sleeper hold", "headlock"],
     
-    "do_tomorrow": ["What good luck!", "Can't wait to see what tomorrow brings!", 
-                    "It sure is great living out in Medusa NY!", "I'll have to talk to #character# about that tomorrow.",
-                    "God I hate them...", "Their body will never be found."],
-    
-    "story": ["Captain's log, day #number#: #feeling#. #did_today# #while_i_was#. #response#. #do_tomorrow#"],
-    
-    "jeremy": ["""#[character:#all_characters#]story#"""],
-    
     "body_part": ["teeth", "dick", "face", "nose", "pinky toe", "spleen", "weenus", "eyeball"],
     
-    "video_game": ["Dead By Daylight", "Minecract", "Overwatch", "Superhot", "Wii Bowling", "Tetris",
+    "video_game": ["Dead By Daylight", "Minecraft", "Overwatch", "Superhot", "Wii Bowling", "Tetris",
                    "Party Hard", "Dance Dance Revolution"],
     
     "alcoholic_drink": ["Fireball", "Samuel Adams", "Jack Daniels", "Long Island Iced Tea", 
