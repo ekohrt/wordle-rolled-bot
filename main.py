@@ -145,7 +145,7 @@ rules = {
                     "It sure is great living out in Medusa NY!", "I'll have to talk to #character# about that tomorrow.",
                     "God I hate them...", "Their body will never be found."],
     
-    "story": ["Captain's log, day #number#: #feeling#. #did_today#, #while_i_was#. #response#. #do_tomorrow#"],
+    "story": ["Captain's log, day #number#: #feeling#. #did_today# #while_i_was#. #response#. #do_tomorrow#"],
     
     "jeremy": ["""#[character:#all_characters#]story#"""],
     
