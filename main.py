@@ -87,7 +87,9 @@ rules = {
     "attached_to": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
                     "magically fused with"],
 
-    "jeremy": ["Captain's log, day #number#: #feeling#. #did_today#. #do_tomorrow#"],
+
+                    
+    "jeremy": ["#[character:#all_characters#]Captain's log, day #number#: #feeling#. #did_today#. #elaboration#. #do_tomorrow##"],
     "number": ["2132545", "21345457"],
     "feeling": ["Today I'm feeling #emotion_adj#", "It's been a #day_adj# day today"],
     "emotion_adj": ["great", "awful", "spectacular", "sexy"],
@@ -111,9 +113,11 @@ rules = {
                     "my horror movie poster collection", "my video game collection", "my yugioh card collection",
                     "my nintendo switch", "my heart"],
     "family": ["Deanna", "Fae", "Ariel", "Quinn"],
-    "character": ["the neighbors", "the neighbors", "the neighbors", "Vincent Markowski", "Sam", "Adam", "Angel",
+    "all_characters": ["the neighbors", "the neighbors", "the neighbors", "Vincent Markowski", "Sam", "Adam", "Angel",
                     "Izzy", "Charlene", "Lindsey", "Christina Barsema", "the voices in my head", "the illuminati",
                     "Tits McGee", "my lawyer"],
+
+    "elaboration": [],
 
     #The neighbors <upstairs, across the street? down the hall?> <thing they did>
     # thing they did: blasted music really loud, got into an argument about <argument_topic>, almost punched me in the face, mooched off my wifi,
