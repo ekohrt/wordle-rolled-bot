@@ -94,12 +94,16 @@ rules = {
     "emotion_adj": ["great", "awful", "fantastic", "sexy", "absolutely shook", "better than ever before", "betrayed"],
     "day_adj": ["a long", "an exciting", "a boring"],
     
-    "did_today": ["#[character:#all_characters#]people_events#", "#[character:#all_characters#]people_events#", "#[character:#family#]pet_events#"],
+    "did_today": ["#[character:#all_characters#]people_events.capitalize#", "#[character:#all_characters#]people_events.capitalize#", "#[character:#family#]pet_events.capitalize#"],
 
-    "people_events": ["#character# blasted #music# really loud", "#character# got into an argument with me about #argument_topic#", 
-                        "#character# almost punched me in the #body_part#", "#character# mooched off my wifi all day", 
-                        "#character# stole #valuable_item#", "#character# smoked so much weed that #family# had to go to the hospital", 
-                        "#character# added some more knife holes to my front door", "#character# tried to give me unsolicited driving advice",
+    "people_events": ["#character# blasted #music# really loud", 
+                        "#character# got into an argument with me about #argument_topic#", 
+                        "#character# almost punched me in the #body_part#", 
+                        "#character# mooched off my wifi all day", 
+                        "#character# stole #valuable_item#", 
+                        "#character# smoked so much weed that #family# had to go to the hospital", 
+                        "#character# added some more knife holes to my front door", 
+                        "#character# tried to give me unsolicited driving advice",
                         ],
 
     "pet_events": ["#character# bit me in the #body_part#", "#character# scratched me on the #body_part#", 
