@@ -141,8 +141,10 @@ rules = {
                 ],
     
     "do_tomorrow": ["What good luck!", "Can't wait to see what tomorrow brings!", 
-                    "It sure is great living out in Medusa NY!", "I'll have to talk to #character# about that tomorrow.",
-                    "God I hate them...", "Their body will never be found."],
+                    "It sure is great living out in Medusa NY!", "#character.capitalize# shouldn't be a problem anymore.",
+                    "God I hate them...", "Their body will never be found.", "Hopefully that's the end of it.",
+                    "And then everybody stood up and clapped, the end.", 
+                    "I still have yet to detect signs of intelligent life anywhere."],
     
     "story": ["Captain's log, day #number#: #feeling#. #did_today# #while_i_was#. #response#. #do_tomorrow#"],
     
