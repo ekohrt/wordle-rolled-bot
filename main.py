@@ -131,7 +131,7 @@ rules = {
                  "It took all my effort not to punch #character# in the #body_part#", 
                  "So I locked #character# in the closet and ignored them", 
                  "I called the police immediately",
-                 "I unleashed my karate skills and landed a #karate_move# right in #character#'s #body_part#"
+                 "So I unleashed my karate skills and landed a #karate_move# right in #character#'s #body_part#"
                  ],
     
     "karate_move": ["karate chop", "front snap kick", "spinning back hook kick", "roundhouse kick", 
