@@ -256,7 +256,8 @@ async def on_message(message):
         await message.channel.send('sorry')
         return
 
-    if all(x in m.split() for x in ['its', "it's", 'ok', 'okay', 'bot']):
+    # it's okay bot (sad face)
+    if all(x in m.split() for x in ['it', 'ok', 'bot']):
         await message.channel.send("｡ﾟ(ﾟ´Д｀ﾟ)ﾟ｡',")
         return
 
