@@ -256,6 +256,10 @@ async def on_message(message):
         await message.channel.send('sorry')
         return
 
+    if all(x in m.split() for x in ['its', "it's", 'ok', 'okay', 'bot']):
+        await message.channel.send("｡ﾟ(ﾟ´Д｀ﾟ)ﾟ｡',")
+        return
+
     if '!jeremy' in m:
         story = grammar.flatten("#jeremy#")
         story = story.replace( "NUMBER", str(random.randint(100, 1400)) )
