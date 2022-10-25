@@ -267,6 +267,10 @@ async def on_message(message):
         await message.channel.send(story)
         return
 
+    if '!sneak' in m:
+        await message.add_reaction('🐟')
+        return
+ 
     
         
 def message_is_wordle(m):
