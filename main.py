@@ -257,7 +257,7 @@ async def on_message(message):
         return
 
     # it's okay bot (sad face)
-    if all(x in m.split() for x in ['it', 'ok', 'bot']):
+    if re.search('it.*ok.*bot', m):
         await message.channel.send("｡ﾟ(ﾟ´Д｀ﾟ)ﾟ｡',")
         return
 
