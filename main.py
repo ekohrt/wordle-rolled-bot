@@ -21,6 +21,11 @@ import re
 import os
 import time
 
+import nltk
+from nltk.stem.porter import PorterStemmer
+def stem(wordList): 
+    return [PorterStemmer().stem(w) for w in wordList]
+
 TOKEN = os.environ['DISCORD_TOKEN']
 CHANNEL_NAME = 'general'
 
@@ -220,6 +225,7 @@ async def on_message(message):
     m = user_message.lower()
     channel = str(message.channel.name)
     print(f'{username}: {user_message} ({channel})')
+    print('STEM:', stem(m.split()))
     
     # make sure bot doesn't respond to itself
     if message.author == client.user:
