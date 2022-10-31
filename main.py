@@ -21,10 +21,21 @@ import re
 import os
 import time
 
+# NLTK Junk ################################
 import nltk
 from nltk.stem.porter import PorterStemmer
 def stem(wordList): 
     return [PorterStemmer().stem(w) for w in wordList]
+from nltk.tokenize import sent_tokenize, word_tokenize
+# need to figure out how to convert doc to sentence vectors so i can use cosine sim to search them
+# but sklearn and numpy are too big for heroku
+############################################
+
+######
+# I could probably fit my kaomoji dataset in here, and the search function
+# do what with it? idk maybe pull random ones for some use? !sparkles could be fun
+######
+
 
 TOKEN = os.environ['DISCORD_TOKEN']
 CHANNEL_NAME = 'general'
