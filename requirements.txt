@@ -3,3 +3,4 @@ tracery
 nltk
 numpy
 scikit-learn
+gensim
