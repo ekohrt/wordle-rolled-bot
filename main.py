@@ -262,7 +262,13 @@ async def on_message(message):
     # if the message is a wordle score, reply with the 'rolled' message
     if message_is_wordle(m):
         time.sleep(2)
-        await message.channel.send(grammar.flatten("#rolled#"))
+
+        if message_is_wordle_but_took_6_tries(m):
+            await message.channel.send("wow 6 tries pshh not even close to rolled get rekt scrub haha lol")
+        else:
+            await message.channel.send(grammar.flatten("#rolled#"))
+
+        
         return
     
     if 'good bot' in m:
@@ -295,6 +301,8 @@ def message_is_wordle(m):
     return ('dle' in m) and re.search('[🟨🟩⬛]{5,6}', m) 
     
 
+def message_is_wordle_but_took_6_tries(m):
+    return re.search('([🟩🟨⬛]+\n){5}[🟩🟨⬛]+', m) 
 
 
 
