@@ -268,7 +268,6 @@ async def on_message(message):
         else:
             await message.channel.send(grammar.flatten("#rolled#"))
 
-        
         return
     
     if 'good bot' in m:
@@ -292,6 +291,10 @@ async def on_message(message):
 
     if '!sneak' in m:
         await message.add_reaction('🐟')
+        return
+
+    if '!eliza' in m:
+        await message.channel.send(nltk.chat.eliza.eliza_chatbot.respond(m.replace('!eliza', '').strip()))
         return
  
     
