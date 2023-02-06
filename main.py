@@ -21,6 +21,9 @@ import re
 import os
 import time
 
+import requests
+from pokemon_showdown_replay_parser import PokemonShowdownReplayParser
+
 # NLTK Junk ################################
 import nltk
 from nltk.stem.porter import PorterStemmer
@@ -297,6 +300,27 @@ async def on_message(message):
     if '!eliza' in m:
         await message.channel.send(nltk.chat.eliza.eliza_chatbot.respond(m.replace('!eliza', '').strip()))
         return
+
+    # TODO: agree with everyone except michael
+
+    # TODO: comment on pasted pokemon teams (parse out pkmn names, use smogon data to point out uncommon stats and moves, 
+    # check type chart to comment on overall move coverage and type weaknesses)
+
+    # TODO: comment on pokemon showdown game links (if pokemon-showdown replay link is posted, request the .log of the url and parse it)
+    
+    # output pokemon teams from pokemonshowdown url
+    if '!team' in m and 'replay.pokemonshowdown.com' in m:
+        try:
+            url = re.search('(https:\/\/)?replay\.pokemonshowdown\.com\/[^\s]+', m)
+            logtext = requests.get(url).text
+            parser = PokemonShowdownReplayParser(logtext)
+            teams_text = parser.run()
+            await message.channel.send(teams_text)
+            return
+        except:
+            await message.channel.send("@Argetlam heeeeeey ethan im broken plz come fix me 👉👈")
+            return
+
  
     
         
