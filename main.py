@@ -311,7 +311,7 @@ async def on_message(message):
     # output pokemon teams from pokemonshowdown url
     if '!team' in m and 'replay.pokemonshowdown.com' in m:
         try:
-            url = re.search('(https:\/\/)?replay\.pokemonshowdown\.com\/[^\s]+', m)
+            url = re.search('(https:\/\/)?replay\.pokemonshowdown\.com\/[^\s]+', m).group(0)
             logtext = requests.get(url).text
             parser = PokemonShowdownReplayParser(logtext)
             teams_text = parser.run()
