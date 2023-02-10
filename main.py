@@ -322,7 +322,8 @@ async def on_message(message):
             return
 
     if '!judge' in m:
-        await message.channel.send('ಠ___ಠ')
+        face = random.choice(['( ≖_≖)', '( ಠ_ಠ)', '( ರ_ರ)', '( ಠ _ಠ)', '(￢_￢)'])
+        await message.channel.send(face)
         return
 
  
