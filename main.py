@@ -62,7 +62,7 @@ rules = {
     "lip_part_2": ["#lip_noun# #lip_verb_er#"],
     "lip_noun": ["lip", "lip", "liver", "lint", 'lard', "ligament", "libertarian", "ligma", "librarian", 
                  "liquorice", "liquid", "lizard", "liquor", "lichen", "lipid", "leg", 
-                 "limb", "litter", "lettuce", "laundry", "laser", "quiver"],
+                 "limb", "litter", "lettuce", "laundry", "laser", "quiver", "pikmin"],
     "lip_adj": ["limp", "limp", "linear", "lithospheric", "liquidy", "limber",
                 "lippy", "limy", "lit", "literal", "little", "lanky"],
     "lip_verb_ing": ["licking", "licking", "lipping", "loving"],
@@ -320,6 +320,10 @@ async def on_message(message):
         except:
             await message.channel.send("@Argetlam heeeeeey ethan im broken plz come fix me 👉👈")
             return
+
+    if '!judge' in m:
+        await message.channel.send('ಠ___ಠ')
+        return
 
  
     
