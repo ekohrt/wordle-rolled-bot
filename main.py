@@ -227,6 +227,12 @@ grammar.add_modifiers(base_english) # add pre-programmed modifiers
 # -----------------------
 # Bot Commands
 # -----------------------
+async def spam_task(message, target):
+    for i in range(10):
+        target_ids = [mention.id for mention in message.mentions] # message.mentions[0].id
+        for user_id in targets:
+            await message.channel.send(f'Hi <@{user_id}>!') # at the target username
+        await asyncio.sleep(random.uniform(0.5, 2)) # sleep a random amount of time
 
 
 @client.event
@@ -324,6 +330,11 @@ async def on_message(message):
     if '!judge' in m:
         face = random.choice(['( ≖_≖)', '( ಠ_ಠ)', '( ರ_ರ)', '( ಠ _ಠ)', '(￢_￢)'])
         await message.channel.send(face)
+        return
+
+    if !spam in m:
+        targets = message.mentions
+        bot.loop.create_task(spam_task(message, targets))
         return
 
  
