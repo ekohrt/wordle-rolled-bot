@@ -335,7 +335,7 @@ async def on_message(message):
 
     if '!spam' in m:
         targets = message.mentions
-        bot.loop.create_task(spam_task(message, targets))
+        client.loop.create_task(spam_task(message, targets))
         return
 
  
