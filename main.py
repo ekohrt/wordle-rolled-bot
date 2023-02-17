@@ -53,6 +53,7 @@ client = discord.Client(intents=intents)
 import tracery
 from tracery.modifiers import base_english
 import random
+import asyncio
 
 # put your grammar here as the value assigned to "rules"
 rules = {
@@ -332,7 +333,7 @@ async def on_message(message):
         await message.channel.send(face)
         return
 
-    if !spam in m:
+    if '!spam' in m:
         targets = message.mentions
         bot.loop.create_task(spam_task(message, targets))
         return
