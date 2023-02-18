@@ -228,8 +228,10 @@ grammar.add_modifiers(base_english) # add pre-programmed modifiers
 # -----------------------
 # Bot Commands
 # -----------------------
+
+# send three @ messages to annoy someone
 async def spam_task(message):
-    for i in range(10):
+    for i in range(3):
         target_ids = [mention.id for mention in message.mentions] # message.mentions[0].id
         for user_id in target_ids:
             await message.channel.send(f'Hi <@{user_id}>!') # at the target username
