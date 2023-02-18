@@ -335,10 +335,10 @@ async def on_message(message):
         await message.channel.send(face)
         return
 
-    if '!spam' in m:
-        targets = message.mentions
-        client.loop.create_task(spam_task(message))
-        return
+    # if '!spam' in m:
+    #     targets = message.mentions
+    #     client.loop.create_task(spam_task(message))
+    #     return
 
  
     
