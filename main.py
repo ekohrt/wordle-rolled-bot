@@ -302,9 +302,9 @@ async def on_message(message):
         await message.channel.send(story)
         return
 
-    if '!sneak' in m:
-        await message.add_reaction('🐟')
-        return
+    # if '!sneak' in m:
+    #     await message.add_reaction('🐟')
+    #     return
 
     if '!eliza' in m:
         await message.channel.send(nltk.chat.eliza.eliza_chatbot.respond(m.replace('!eliza', '').strip()))
@@ -318,9 +318,10 @@ async def on_message(message):
     # TODO: comment on pokemon showdown game links (if pokemon-showdown replay link is posted, request the .log of the url and parse it)
     
     # output pokemon teams from pokemonshowdown url
-    if '!team' in m and 'replay.pokemonshowdown.com' in m:
+    if '!team ' in m: #and 'replay.pokemonshowdown.com' in m:
         try:
-            url = re.search('(https:\/\/)?replay\.pokemonshowdown\.com\/[^\s]+', m).group(0)
+            # url = re.search('(https:\/\/)?replay\.pokemonshowdown\.com\/[^\s]+', m).group(0)
+            url = m.split(' ')[1]
             logtext = requests.get(url).text
             parser = PokemonShowdownReplayParser(logtext)
             teams_text = parser.run()
