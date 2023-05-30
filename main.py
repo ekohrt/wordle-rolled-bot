@@ -107,10 +107,10 @@ rules = {
     "plural_modifier":   [" on #thing_on#", " in #thing_in#", " #plur_plur_mod# #roll_thing_plural#"],
 
     "thing_on": ["a hill", "a treadmill", "a skateboard", "rollerskates", "ecstasy", "a windmill", 
-                 "a rollercoaster", "a yo-yo", "a slip 'n' slide", "the packaging for #roll_thing_singular#"],
+                 "a rollercoaster", "a yo-yo", "a slip 'n' slide", "a pile of #roll_thing_plural#"],
     "thing_in": ["a rock tumbler", "a washing machine", "an industrial centrifuge", "a hurricane", 
                  "a wind tunnel", "a cocktail shaker", "a gymnastics class", "a parkour video", 
-                 "a salad spinner", "the back of an Amazon delivery van",
+                 "a salad spinner", "the back of an Amazon delivery van", "a pinball machine",
                  "a trenchcoat trying to buy #roll_thing_plural#", "a stage production about #roll_thing_plural#"],
     "sing_sing_mod": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
                       "wrapped around", "packed inside of", "impersonating", "infused with the essence of",
