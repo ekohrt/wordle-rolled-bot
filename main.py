@@ -73,9 +73,11 @@ rules = {
     
 
     # ROLLED PHRASE
-    "rolled": ["rolled like #roll_thing_singular##modifier#.", "rolled harder than #roll_thing_singular##modifier#."],
-    "modifier": [" on #thing_on#", " in #thing_in#", " covered in #roll_thing_plural#", " #attached_to# #roll_thing_singular#", " made of #roll_thing_plural#"],
-    "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", 
+    "rolled": ["rolled like #roll_thing_singular##singular_modifier#.", 
+               "rolled harder than #roll_thing_singular##singular_modifier#.",
+               "rolled like #roll_thing_plural##plural_modifier#.", 
+               "rolled harder than #roll_thing_singular##plural_modifier#.",],
+    "roll_thing_singular": ["a cinnamon roll", "a fruit roll-up", "a rolling pin", "a watermelon",
                             "a tyrannosrollus rex", "a bean burrito", "a Ferrari#wheel_modifier#",
                             "a pizza roll", "a sushi roll", "a spring roll", "a tootsie roll", 
                             "a pinewood derby car#wheel_modifier#", "an ankle", "a D20", "Hammond from Overwatch", 
@@ -83,31 +85,40 @@ rules = {
                             "a wheel of parmagiano romano", "a pillbug",
                             "Louis XVI's head in the french revolution", "a coconut",
                             "thomas the tank engine#wheel_modifier#", "a roll of toilet paper", 
-                            "a hay bale", "that one cart wheel that refuses to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts into the floor tiles#wheel_modifier#",
+                            "a hay bale", "jigglypuff", "a court jester juggling #roll_thing_plural#",
                             "an armadillo", "a pencil dropped during a math exam", 
                             "Wario's motorbike#wheel_modifier#", "a boulder", "a can of beans",
                             "a very round loaf of bread", "a restless baby", "a tumbleweed"],
-    "wheel_modifier": ["", " with wheels made of #roll_thing_plural#", " with wheels made of #roll_thing_plural#"],          
     "roll_thing_plural": ["heads during the french revolution", "tumbleweeds",
                           "cinnamon rolls", "fruit roll-ups", "rolling pins", 
                             "bean burritos", 
                             "pizza rolls", "sushi rolls", "spring rolls", "tootsie rolls", 
                             "pinewood derby cars#wheel_modifier#", "ankles", "D20s", "Hammonds from Overwatch", 
                             "bacci balls", "dung beetles pushing #roll_thing_plural#",
-                            "wheels of parmagiano romano",  
+                            "wheels of parmagiano romano", "court jesters juggling #roll_thing_plural#",
                             "heads in the french revolution", "coconuts",
-                            "rolls of toilet paper", "restless babies", "pillbugs",
+                            "toilet paper rolls", "restless babies", "pillbugs",
                             "hay bales", "those cart wheels that refuse to cooperate but you already took the cart and there's people behind you so you're stuck with it and you should have just gotten a basket for the two things you needed but now i guess i'm gonna drag this heavy-ass hunk of metal around wegmans until the fucking rubber melts into the floor tiles",
                             "armadillos", "pencils dropped during a math exam", 
-                            "Wario's motorbikes#wheel_modifier#", "boulders", "cans of beans",
+                            "boulders", "bean cans",
                             "very round loaves of bread"],
+
+    "singular_modifier": [" on #thing_on#", " in #thing_in#", " #sing_sing_mod# #roll_thing_singular#", " #sing_plur_mod# #roll_thing_plural#"],
+    "plural_modifier":   [" on #thing_on#", " in #thing_in#", " #plur_plur_mod# #roll_thing_plural#"]
+
     "thing_on": ["a hill", "a treadmill", "a skateboard", "rollerskates", "ecstasy", "a windmill", 
                  "a rollercoaster", "a yo-yo", "a slip 'n' slide", "#roll_thing_singular#"],
     "thing_in": ["a rock tumbler", "a washing machine", "an industrial centrifuge", "a hurricane", 
                  "a wind tunnel", "a cocktail shaker", "a gymnastics class", "a parkour video", 
-                 "a salad spinner", "the back of an Amazon delivery van"],
-    "attached_to": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
-                    "magically fused with"],
+                 "a salad spinner", "the back of an Amazon delivery van",
+                 "a trenchcoat trying to buy #roll_thing_plural#", "a stage production about #roll_thing_plural#"],
+    "sing_sing_mod": ["stapled to", "welded to", "glued to", "in orbit with", "duct taped to", 
+                      "wrapped around", "packed inside of", "impersonating", "infused with the essence of",
+                      "generated by AI to look like"],
+    "sing_plur_mod": ["made of", "covered in", "melted down and forged into", "filming a docu-drama about", 
+                      "sentenced to life in prison by a jury of", "pan-fried and served with a side of"],
+    "plur_plur_mod" : ["#sing_sing_mod#"], # same as singular-singular, for now
+    "wheel_modifier": ["", " with wheels made of #roll_thing_plural#", " with wheels made of #roll_thing_plural#"],          
 
 
     # JEREMY BOT
