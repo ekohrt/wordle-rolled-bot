@@ -104,7 +104,7 @@ rules = {
                             "very round loaves of bread"],
 
     "singular_modifier": [" on #thing_on#", " in #thing_in#", " #sing_sing_mod# #roll_thing_singular#", " #sing_plur_mod# #roll_thing_plural#"],
-    "plural_modifier":   [" on #thing_on#", " in #thing_in#", " #plur_plur_mod# #roll_thing_plural#"]
+    "plural_modifier":   [" on #thing_on#", " in #thing_in#", " #plur_plur_mod# #roll_thing_plural#"],
 
     "thing_on": ["a hill", "a treadmill", "a skateboard", "rollerskates", "ecstasy", "a windmill", 
                  "a rollercoaster", "a yo-yo", "a slip 'n' slide", "#roll_thing_singular#"],
