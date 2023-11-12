@@ -348,6 +348,17 @@ async def on_message(message):
         await message.channel.send(face)
         return
 
+    if 'right bot' in m:
+        if message.author.name == "sauceyaTTa":
+            s = random.choice(['huh?', 'wha?', "maybe? idk", ])
+        elif message.author.name == 'Argetlam':
+            s = random.choice([f'{message.author.mention} oh totally 👍👍', 
+                               f'{message.author.mention} 100% agree', 
+                               f'{message.author.mention} FACTS.',
+                               f'{message.author.mention} 🫡',
+                               f"{message.author.mention} i mean that's obviously correct"])
+        await message.channel.send(s)
+        return
     # if '!spam' in m:
     #     targets = message.mentions
     #     client.loop.create_task(spam_task(message))
