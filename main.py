@@ -356,6 +356,8 @@ async def on_message(message):
                                f'{message.author.mention} without question.',
                                f'{message.author.mention} totally.',
                                f'{message.author.mention} yup.',
+                               f'{message.author.mention} correct.',
+                               f'{message.author.mention} right.',
                                f'{message.author.mention} 🫡'])
         else:
             s = random.choice(['huh?', 'wha?', "hm?"])
