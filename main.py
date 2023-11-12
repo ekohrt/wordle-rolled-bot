@@ -349,16 +349,16 @@ async def on_message(message):
         return
 
     if 'right bot' in m:
-        if message.author.name == "sauceyaTTa":
-            s = random.choice(['huh?', 'wha?', "maybe idk", ])
-        elif message.author.name == 'Argetlam':
-            s = random.choice([f"{message.author.mention} couldn't agree more", 
-                               f'{message.author.mention} 100% agree', 
+        if message.author.name not in ['sauceyaTTa']:
+            s = random.choice([f"{message.author.mention} couldn't agree more.", 
+                               f'{message.author.mention} 100% agree.', 
                                f'{message.author.mention} FACTS.',
-                               f'{message.author.mention} yes.',
+                               f'{message.author.mention} without question.',
+                               f'{message.author.mention} totally.',
+                               f'{message.author.mention} yup.',
                                f'{message.author.mention} 🫡'])
         else:
-            s = "testing"
+            s = random.choice(['huh?', 'wha?', "hm?"])
         await message.channel.send(s)
         return
     # if '!spam' in m:
